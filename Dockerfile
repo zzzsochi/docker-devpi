@@ -17,8 +17,7 @@ ENV DEVPI_SERVERDIR=/srv/devpi
 # ENV DEVPI_PASSWORD=
 # ENV DEVPI_INDEX=
 
-RUN pip3 install --no-index --find-links=/srv/wheels devpi-server devpi-client && \
-    rm -rf /srv/wheels /root/.cache
+RUN pip3 install --no-cache-dir --no-index --find-links=/srv/wheels devpi-server devpi-client
 
 COPY entrypoint.sh /srv/entrypoint.sh
 ENTRYPOINT ["/srv/entrypoint.sh"]
