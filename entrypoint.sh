@@ -42,5 +42,5 @@ else
         echo "skip initialization"
     fi
 
-    exec devpi-server --host=0.0.0.0
+    exec devpi-server --host=0.0.0.0 --port=3141
 fi

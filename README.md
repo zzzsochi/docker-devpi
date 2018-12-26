@@ -1,6 +1,6 @@
 # Container With Devpi Server
 
-A Docker image based on [python:3.6-alpine3.6](https://hub.docker.com/_/python) that runs
+A Docker image based on [python:3.7-alpine3.8](https://hub.docker.com/_/python) that runs
 a [devpi](http://doc.devpi.net) server (*a PyPi Cache*).
 
 
