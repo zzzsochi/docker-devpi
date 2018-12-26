@@ -24,6 +24,8 @@ docker run -it --rm -p 3141:3141 -v /local/path/to/data:/srv/devpi --name devpi 
 | DEVPI_USER          | Create user                                     |
 | DEVPI_PASSWORD      | Password for user ``$DEVPI_USER``               |
 | DEVPI_INDEX         | Create index named ``$DEVPI_USER/$DEVPI_INDEX`` |
+| DEVPI_HOST          | Default: ``0.0.0.0``
+| DEVPI_PORT          | Default: ``3141``
 
 #### Example
 
