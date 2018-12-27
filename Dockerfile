@@ -12,10 +12,10 @@ COPY --from=0 /srv/wheels /srv/wheels
 
 VOLUME /srv/devpi
 
-ENV DEVPI_SERVERDIR=/srv/devpi
-# ENV DEVPI_USER=
-# ENV DEVPI_PASSWORD=
-# ENV DEVPI_INDEX=
+ENV DEVPISERVER_SERVERDIR=/var/lib/devpi
+# ENV DEVPISERVER_USER=
+# ENV DEVPISERVER_PASSWORD=
+# ENV DEVPISERVER_INDEX=
 
 RUN pip3 install --no-cache-dir --no-index --find-links=/srv/wheels devpi-server devpi-client
 

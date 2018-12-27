@@ -18,14 +18,14 @@ docker run -it --rm -p 3141:3141 -v /local/path/to/data:/srv/devpi --name devpi 
 
 ### Automated initialization
 
-| Variable            | Description                                     |
-|---------------------|-------------------------------------------------|
-| DEVPI_ROOT_PASSWORD | Set password for root user                      |
-| DEVPI_USER          | Create user                                     |
-| DEVPI_PASSWORD      | Password for user ``$DEVPI_USER``               |
-| DEVPI_INDEX         | Create index named ``$DEVPI_USER/$DEVPI_INDEX`` |
-| DEVPI_HOST          | Default: ``0.0.0.0``
-| DEVPI_PORT          | Default: ``3141``
+| Variable                  | Description                                           |
+|---------------------------|-------------------------------------------------------|
+| DEVPISERVER_ROOT_PASSWORD | Set password for root user                            |
+| DEVPISERVER_USER          | Create user                                           |
+| DEVPISERVER_PASSWORD      | Password for user ``$DEVPISERVER_USER``               |
+| DEVPISERVER_INDEX         | Create index named ``$DEVPISERVER_USER/$DEVPI_INDEX`` |
+| DEVPISERVER_HOST          | Default: ``0.0.0.0``                                  |
+| DEVPISERVER_PORT          | Default: ``3141``                                     |
 
 #### Example
 
@@ -33,10 +33,10 @@ docker run -it --rm -p 3141:3141 -v /local/path/to/data:/srv/devpi --name devpi 
 docker run -it --rm --name devpi \
     -p 0.0.0.0:3141:3141 \
     -v /srv/devpi_data:/srv/devpi \
-    -e DEVPI_ROOT_PASSWORD=abracadabra \
-    -e DEVPI_USER=ci \
-    -e DEVPI_PASSWORD=else-abracadabra \
-    -e DEVPI_INDEX=mirror \
+    -e DEVPISERVER_ROOT_PASSWORD=abracadabra \
+    -e DEVPISERVER_USER=ci \
+    -e DEVPISERVER_PASSWORD=else-abracadabra \
+    -e DEVPISERVER_INDEX=mirror \
     zzzsochi/devpi
 ```
 
